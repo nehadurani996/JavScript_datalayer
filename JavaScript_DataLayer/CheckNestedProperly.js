@@ -25,6 +25,5 @@ function isJSONProperlyNested(jsonString) {
       }
     }
   }`;
-
 console.log(isJSONProperlyNested(jsonString));
   
