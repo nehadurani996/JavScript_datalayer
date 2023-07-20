@@ -1,17 +1,9 @@
 let breadLayer = [];
 
 function validateProcessName(processName) {
-  const regex = /^(PM||CB||WM)-(Loan||Insurance||Pension||Other)-(\w+)-(\w+)$/;
+  const regex = /^(PM|CB|WM)-(Loan|Insurance|Pension|Other)-(\w+)-(\w+)$/;
   return regex.test(processName);
 }
-
-function validateDataLayerEvent(eventData) {
-  // Check that the object is nested properly
-  if (!eventData || !eventData.event || !eventData.page || !eventData.page.process) {
-    console.error('Invalid data layer event structure');
-    return false;
-  }
-
   // Check data types
   if (typeof eventData.event !== 'string' || typeof eventData.page.process.name !== 'string') {
     console.error('Invalid data types in the data layer event');
