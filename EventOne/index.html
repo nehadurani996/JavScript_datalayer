@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Events</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <ul>
+    <li><img src="images/ylw.gif" alt="yellow"></li>
+    <li><img src="images/org.gif" alt="orange"></li>
+    <li><img src="images/ppl.gif" alt="purple"></li>
+    <li><img src="images/blu.gif" alt="blue"></li>
+    <li><img src="images/pnk.gif" alt="pink" onclick="alert('Pink button clicked')"></li> <!-- bad practic as code is hard to modify-->  
+    <li><img src="images/grn.gif" alt="green" id="green"></li>
+    <li><img src="images/ygr.gif" alt="ygreen"></li>
+    <li><img src="images/gry.gif" alt="gray" id="gray"></li>
+    <li><img src="images/red.gif" alt="red"></li>
+
+  </ul>
+</body>
+<script>
+  
+  document.getElementById('gray').addEventListener('click',function(){ 
+    alert('Clicked on Gray');
+  }
+  ,false);
+
+  <!--document.getElementById('green').onclick=function(){ 
+    alert('Clicked on Green');} -->
+  
+  </script>
+</html>
